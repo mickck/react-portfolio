@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logo from "../../public/mk.ico";
+import logo from "../assets/img/mk.ico";
 // import DarkModeToggleButton from "./pages/darkModuleToggleBtn";
 export default function Header() {
   function onFooter() {
