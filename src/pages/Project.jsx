@@ -38,7 +38,7 @@ export default function Projects() {
         <span className="pl-4 text-blue-500">{projects.length}</span>
       </h1>
 
-      <div className="grid grid-cols-1 gap-8 mx-auto xs:p-1 xs:m-0 sm:grid-cols-1 sm:p-10 md:grid-cols-2  lg:grid-cols-2 xl:grid-cols-3  ">
+      <div className="grid grid-cols-1 gap-8 mx-auto p-2 xs:m-0 sm:grid-cols-1 sm:p-10 md:grid-cols-2  lg:grid-cols-2 xl:grid-cols-3  ">
         {projects.map((project, index) => (
           <div
             key={index}

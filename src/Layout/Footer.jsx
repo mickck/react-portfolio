@@ -3,12 +3,15 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <footer className="text-gray-600 body-font">
-        <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-          <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+      <footer
+        className="text-gray-600 body-font >
+"
+      >
+        <div className="flex mt-8 max-w-[90%] 2xl:max-w-[1440px] mx-auto pt-8 items-center">
+          <p className="text-sm  text-gray-500 ml-4 pl-4 border-l-2 border-gray-200 sm:py-2 sm:mt-0 mt-4">
             {`Mike's `}
             <Link
-              href="/project"
+              to="/project"
               className="text-gray-600 ml-1 hover:text-gray-700"
               rel="noopener noreferrer"
             >
@@ -17,8 +20,8 @@ export default function Footer() {
           </p>
           <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start items-center">
             <Link
-              className="ml-3 text-gray-500 "
-              href="https://github.com/mickck"
+              className="ml-3 text-gray-500 transition-all hover:text-gray-800"
+              to="https://github.com/mickck"
               target="_blank"
             >
               <svg
@@ -34,8 +37,8 @@ export default function Footer() {
             </Link>
             {/* LinkdIn */}
             <Link
-              className="ml-3 text-gray-500 "
-              href="mailto:mw.mikekim@gmail.com"
+              className="ml-3 text-gray-500 transition-all hover:text-red-500"
+              to="mailto:mw.mikekim@gmail.com"
             >
               <svg
                 fill="none"
@@ -51,8 +54,8 @@ export default function Footer() {
               </svg>
             </Link>
             <Link
-              className="ml-3 text-gray-500"
-              href="www.linkedin.com/in/mw-mikekim"
+              className="ml-3 text-gray-500 transition-all hover:text-blue-600"
+              to="https://www.linkedin.com/in/mw-mikekim"
               target="_blank"
             >
               <svg
