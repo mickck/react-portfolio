@@ -28,7 +28,7 @@ export default function Projects() {
 
   // Show actual content once data is loaded
   return (
-    <div className="flex flex-col items-center justify-center px-3">
+    <div className="flex flex-col items-center justify-center px-3 lg:mt-6">
       <header>
         <title>Mike Portfolio</title>
         <meta name="description" content="hard" />
@@ -38,34 +38,48 @@ export default function Projects() {
         <span className="pl-4 text-blue-500">{projects.length}</span>
       </h1>
 
-      <div className="grid grid-cols-1 gap-10 mx-auto xs:p-1 xs:m-0 sm:grid-cols-1 sm:p-10 md:grid-cols-2 md:p-10 lg:grid-cols-3 lg:p-20">
+      <div className="grid grid-cols-1 gap-8 mx-auto xs:p-1 xs:m-0 sm:grid-cols-1 sm:p-10 md:grid-cols-2  lg:grid-cols-2 xl:grid-cols-3  ">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="p-5 border rounded-lg shadow-sm gap-2 flex flex-col"
+            className="p-5 border rounded-lg shadow-sm gap-4 flex flex-col"
           >
-            <img src={project.img} alt="" className="rounded-lg " />
+            <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
+              <img
+                src={project.img}
+                className="absolute top-0 left-0 w-full h-full object-cover rounded-lg"
+              />
+            </div>
             <h2 className="text-xl font-bold">{project.title}</h2>
-            <div className="flex gap-2 -mt-1 ">
+            <div className="flex gap-2 -mt-1  ">
               {project.tag.map((tag, idx) => (
                 <span
                   key={idx}
-                  className="bg-blue-500 text-white px-2 py-1 text-sm font-semibold rounded-full "
+                  className="bg-blue-500 text-white px-2 py-1 text-xs font-semibold rounded-full "
                 >
                   {tag}
                 </span>
               ))}
             </div>
             <p>{project.description}</p>
-            <a
-              href={project.site}
-              className="text-blue-500 hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Visit Site
-            </a>
-            <p hidden>{project.createdby}</p>
+            {project.site && (
+              <a
+                href={project.site}
+                className="text-blue-500 hover:underline"
+                target="_blank"
+              >
+                Visit Site
+              </a>
+            )}
+            {project.github && (
+              <a
+                href={project.github}
+                className="text-blue-500 hover:underline"
+                target="_blank"
+              >
+                Github
+              </a>
+            )}
           </div>
         ))}
       </div>
